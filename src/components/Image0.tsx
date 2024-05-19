@@ -1,23 +1,18 @@
-import { useCallback, useEffect, useState } from "react";
+import { useState } from "react";
+import { useInterval } from "./misc/useInterval";
 
 /**
  * 更新のテスト
  */
 export function Image0() {
-  const fps = 10;
   const [latests] = useState<number[]>([]);
   const [latestFps, setLatestFps] = useState(0);
 
-  const update = useCallback(() => {
+  function update() {
     setLatestFps(getLatestFPS(latests));
-  }, [latests]);
+  }
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      update();
-    }, 1000 / fps);
-    return () => clearInterval(interval);
-  }, [update]);
+  useInterval(update);
 
   return <div>{latestFps}</div>;
 }
