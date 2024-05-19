@@ -1,37 +1,12 @@
 import "./App.css";
-import { Image0 } from "./Image0";
+import { Image1 } from "./Image1";
 
 export function App() {
   return (
     <div style={{ display: "flex", flexWrap: "wrap" }}>
-      <Image0 />
-      <Image0 />
-      <Image0 />
-      <Image0 />
-      <Image0 />
-      <Image0 />
-      <Image0 />
-      <Image0 />
-      <Image0 />
-      <Image0 />
-      <Image0 />
-      <Image0 />
-      <Image0 />
-      <Image0 />
-      <Image0 />
-      <Image0 />
-      <Image0 />
-      <Image0 />
-      <Image0 />
-      <Image0 />
-      <Image0 />
-      <Image0 />
-      <Image0 />
-      <Image0 />
-      <Image0 />
-      <Image0 />
-      <Image0 />
-      <Image0 />
+      {[...Array(5)].map((_, i) => (
+        <Image1 key={i} />
+      ))}
     </div>
   );
 }
