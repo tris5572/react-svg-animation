@@ -21,7 +21,14 @@ export function Image0() {
   useInterval(update, 10);
 
   return (
-    <div style={{ width: `${WIDTH}px`, height: `${HEIGHT}px`, flexShrink: 0 }}>
+    <div
+      style={{
+        width: `${WIDTH}px`,
+        height: `${HEIGHT}px`,
+        minWidth: `${WIDTH}px`,
+        minHeight: `${HEIGHT}px`,
+      }}
+    >
       <svg
         viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
         xmlns="http://www.w3.org/2000/svg"
